@@ -1,0 +1,99 @@
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+$success-color: #4caf50;
+$error-color: #f44336;
+$warning-color: #ff9800;
+$pending-color: #9e9e9e;
+
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  color-scheme: light;
+
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  // Reset the user agent margin.
+  margin: 0;
+}
+
+.status-chip {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+
+  &.sent {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+
+  &.failed {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+
+  &.pending {
+    background-color: #fff8e1;
+    color: #f57f17;
+  }
+}
+
+.error-banner {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border-left: 4px solid #f44336;
+}
+
+.page-container {
+  padding: 24px 0;
+}
+
+.section-title {
+  margin-bottom: 24px;
+}
+
+mat-spinner {
+  margin: 32px auto;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 48px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+table.mat-mdc-table {
+  width: 100%;
+}

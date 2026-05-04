@@ -1,0 +1,14 @@
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+
+  .section-title {
+    margin: 0;
+  }
+}
+
+table {
+  width: 100%;
+}
