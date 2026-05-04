@@ -72,7 +72,3 @@ export const environment = {
 **RxJS polling** — `interval` + `takeUntil` for the post-send log polling. Stops automatically when all logs reach a terminal status (`SENT` / `FAILED`) or after 15 seconds.
 
 **Angular Material** — consistent, accessible UI with minimal custom CSS. Only the modules needed per component are imported.
-
-## Screenshots
-
-> TODO: add screenshots of /send, /messages, and /logs pages.
